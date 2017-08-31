@@ -8,7 +8,7 @@
 <script>
     import TipLogin from "./TipLogin.vue";
     import RecordMember from "./RecordMember.vue";
-    import CommonManager from "./js/CommonManager";
+    import CommonManager from "./js/CommonManager.js";
 
     let manager = new CommonManager();
 
@@ -22,7 +22,7 @@
         name: 'page-content',
         data() {
             return {
-                userState: 'Allow'
+                userState: USER_STATE_UNAUTHORIZED
             }
         },
         methods: {

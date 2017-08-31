@@ -3,7 +3,7 @@
         <div class="alert alert-success" v-if="status==1">
             <b>请按照表单提示填入黑名单成员的信息，并点击提交以录入！</b>
         </div>
-        <div class="alert alert-danger" v-else-if="status==2">
+        <div class="alert alert-warning" v-else-if="status==2">
             <div class="text-center"><h4>您登陆的用户无权限进行黑名单的录入操作！</h4>
                 如有疑问，或是遇到问题，请联系网站管理员QQ610691723<br/>
                 您也可以选择，在<a href="http://bbs.dnfzhengfuzhe.com" target="_blank">bbs.dnfzhengfuzhe.com</a>
@@ -14,7 +14,7 @@
         <div class="alert alert-danger" v-else-if="status==3">
             <div class="text-center">
                 <h4>您尚未登陆本系统，请登录后再进行录入操作！</h4>
-                <a href="http://bbs.dnfzhengfuzhe.com/member.php?mod=logging&action=login" target="_blank">请点这里登录</a>
+                <a href="http://bbs.dnfzhengfuzhe.com/member.php?mod=logging&action=login" target="_blank" @click="onLoginLinkClick()">请点这里登录</a>
             </div>
         </div>
         <div class="alert alert-info" v-else="">
@@ -50,6 +50,11 @@
                 } else {
                     return -1;
                 }
+            }
+        },
+        methods:{
+            onLoginLinkClick:function () {
+
             }
         }
     }
