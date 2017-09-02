@@ -2,12 +2,22 @@
     <div class="bs-example">
         <form ref="form">
             <div class="form-group">
-                <label for="inputId">ID</label>
+                <label for="inputId">ID/名称</label>
                 <input type="email" v-model="name" class="form-control" id="inputId" placeholder="名称">
             </div>
             <div class="form-group">
                 <label for="inputArea">跨区</label>
-                <input type="text" v-model="area" class="form-control" id="inputArea" placeholder="跨区">
+                <select v-model="area" id="inputArea">
+                    <option value="跨3B" selected="selected">跨3B</option>
+                    <option value="跨4">跨4</option>
+                    <option value="跨5">跨5</option>
+                    <option value="跨6">跨6</option>
+                    <option value="跨7">跨7</option>
+                    <option value="跨8">跨8</option>
+                    <option value="跨3A">跨3A</option>
+                    <option value="跨1">跨1</option>
+                    <option value="跨2">跨2</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="inputImage">附图</label>

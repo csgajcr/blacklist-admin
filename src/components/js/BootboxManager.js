@@ -21,7 +21,8 @@ class BootboxManager {
 
     showLoadingDialog() {
         var dialog = bootbox.dialog({
-            message: '<div class="text-center"><i class="fa fa-spin fa-spinner"></i> Loading...</div>'
+            message: '<div class="text-center"><i class="fa fa-spin fa-spinner"></i> Loading...</div>',
+            closeButton: false
         });
         return dialog;
     }

@@ -14,6 +14,7 @@
         <div class="alert alert-danger" v-else-if="status==3">
             <div class="text-center">
                 <h4>您尚未登陆本系统，请登录后再进行录入操作！</h4>
+                (注：如果您是刚注册的用户，请退出后重新登录)<br/>
                 <a href="http://bbs.dnfzhengfuzhe.com/member.php?mod=logging&action=login" target="_blank" @click="onLoginLinkClick()">请点这里登录</a>
             </div>
         </div>
@@ -29,6 +30,10 @@
     const USER_STATE_DENIED = 'Denied'; //已登录但不允许
     const USER_STATE_ALLOW = 'Allow'; //已登录并允许
     const USER_STATE_UNAUTHORIZED = 'Unauthorized'; //未登录
+    import BootboxManager from './js/BootboxManager.js'
+    import CommonManager from './js/CommonManager.js'
+
+    let bootbox = new BootboxManager();
 
     export default {
         name: 'tip-login',
