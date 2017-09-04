@@ -6,17 +6,18 @@
                 <input type="email" v-model="name" class="form-control" id="inputId" placeholder="名称">
             </div>
             <div class="form-group">
-                <label for="inputArea">跨区</label>
+                <label for="inputArea">所属大区</label>
                 <select v-model="area" id="inputArea">
-                    <option value="跨3B" selected="selected">跨3B</option>
-                    <option value="跨4">跨4</option>
-                    <option value="跨5">跨5</option>
-                    <option value="跨6">跨6</option>
-                    <option value="跨7">跨7</option>
-                    <option value="跨8">跨8</option>
-                    <option value="跨3A">跨3A</option>
-                    <option value="跨1">跨1</option>
-                    <option value="跨2">跨2</option>
+                    <option value="重庆1区" selected>重庆1区</option>
+                    <option value="重庆2区">重庆2区</option>
+                    <option value="西南1区">西南1区</option>
+                    <option value="西南2区">西南2区</option>
+                    <option value="西南3区">西南3区</option>
+                    <option value="云贵1区">云贵1区</option>
+                    <option value="贵州1区">贵州1区</option>
+                    <option value="云南1区">云南1区</option>
+                    <option value="陕西1区">陕西1区</option>
+                    <option value="陕西2区">陕西2区</option>
                 </select>
             </div>
             <div class="form-group">
@@ -45,7 +46,7 @@
         data() {
             return {
                 name: '',
-                area: '',
+                area: '重庆一区',
                 comment: '',
             }
         },
@@ -60,7 +61,7 @@
                     if (isSuccess && ret.code == 0) {
                         bootbox.showSuccessMessage('提交成功');
                         self.name = '';
-                        self.area = '';
+                        self.area = '重庆一区';
                         self.comment = '';
                         self.$refs.form.reset();
                     } else {
